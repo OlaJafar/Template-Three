@@ -4,7 +4,7 @@
     --main-color-alt:#1787e0;
     --main-transition:.3s;
     --main-padding: 100px;
-    --secondary-color:#ececec;
+    --secondary-color:#ececec !important;
     --font-color:#777;
 }
 *{
