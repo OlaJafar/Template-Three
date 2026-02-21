@@ -4,7 +4,7 @@
     --main-color-alt:#1787e0;
     --main-transition:.3s;
     --main-padding: 100px;
-    --secondary-color:#ececec;
+    --s-color:#ececec;
     --font-color:#777;
 }
 *{
@@ -319,7 +319,7 @@ a{
 /*Start of landing*/
 .landing::before{
     content: "";
-    background-color:var(--secondary-color) ;
+    background-color:var(--s-color) ;
     width:100%;
     min-height: 100%;
     position: absolute;
@@ -501,7 +501,7 @@ a{
 /*Start of gallery*/
 .gallery{
     padding: var(--main-padding) 0;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
 }
 .gallery .container .body{
     display: grid;
@@ -717,7 +717,7 @@ a{
 /*Start of Testimonials*/
 .testimonials{
     padding: var(--main-padding) 0;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
 }
 .testimonials .container{
 
@@ -735,7 +735,7 @@ a{
 .testimonials .container .body .card .image{
     width:27%;
     padding:10px;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
     border-radius: 100%;
     position: absolute;
     right: -10px;
@@ -801,7 +801,7 @@ a{
     position: absolute;
     width:80%;
     height: 100%;
-    background: var(--secondary-color);
+    background: var(--s-color);
     z-index: -1;
     top:0;
     right: 0;
@@ -861,7 +861,7 @@ a{
 /*Start of services*/
 .services{
     padding: var(--main-padding) 0;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
 }
 .services .container{
 
@@ -1010,7 +1010,7 @@ a{
             to right,
             var(--main-color) 0%,
             var(--main-color) var(--percent),
-            var(--secondary-color) var(--percent)) 1;
+            var(--s-color) var(--percent)) 1;
     padding:20px 0;
     position: relative;
     font-weight: bold;
@@ -1026,7 +1026,7 @@ a{
 /*Start of work*/
 .work{
     padding: var(--main-padding) 0;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
 }
 .work .body{
     display: flex;
@@ -1191,7 +1191,7 @@ a{
 }
 .events .body .bottom form{
     padding: 30px 30px;
-    background-color: var(--secondary-color);
+    background-color: var(--s-color);
     border-radius: 999px;
     display: flex;
     gap:20px;
