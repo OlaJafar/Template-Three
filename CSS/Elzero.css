@@ -431,6 +431,7 @@ a{
 }
 .articles .container .body .card:hover{
     transform: translateY(-10px);
+    cursor: pointer;
 }
 .articles .container .body .card .image{
     width:100%;
@@ -531,6 +532,7 @@ a{
 .gallery .container .body .card .image {
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 .gallery .container .body .card .image:hover::before{
     width: 200%;
@@ -672,6 +674,7 @@ a{
 }
 .features .container .body .card:hover a{
     color: white;
+    cursor: pointer;
 }
 @media (max-width: 991px) {
     .features .container .body .card:hover .image::after{
@@ -1249,6 +1252,215 @@ a{
     }
 }
 /*End of events*/
+/*Start of pricing*/
+.pricing{
+    padding: var(--main-padding) 0;
+    background-color: var(--s-color);
+    position: relative;
+}
+.pricing .body{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+.pricing .body .card::before{
+    width:0;
+    content: "";
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top:0;
+    transition: var(--main-transition);
+    background-color: rgba(211, 211, 211, 0.3);
+    z-index: 0;
+}
+.pricing .body .card:hover::before{
+    width: 100%;
+}
+.pricing .body .card{
+    background-color: white;
+    width:340px;
+    box-shadow: 0 0 10px 5px lightgrey;
+    position: relative;
+    z-index: 1;
+}
+.pricing .body .card::after{
+    width:0;
+    content: "";
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    transition: var(--main-transition);
+    background-color: rgba(211, 211, 211, 0.3);
+    z-index: 0;
+}
+.pricing .body .card:hover::after{
+    width: 100%;
+}
+.pricing .body .card:nth-of-type(2){
+    transform: translateY(-20px);
+}
+.pricing .body .card .label{
+    position: absolute;
+    top:44px;
+    right:-9%;
+    transform: rotate(90deg);
+    background-color: var(--main-color);
+    color: white;
+    padding:10px 25px 10px 10px;
+    font-weight: bold;
+}
+.pricing .body .card .label span{
+    border: 20px solid;
+    border-color: transparent transparent white transparent;
+    transform: rotate(270deg);
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+    transition:var(--main-transition);
+}
+.pricing .body .card:hover .label span:last-of-type{
+    border-color:transparent transparent rgba(211, 211, 211, 0.3);
+}
+.pricing .body .card h3{
+    width:100%;
+    text-align: center;
+    margin:0;
+    padding-top:30px;
+    font-weight: 800;
+    font-size: 25px;
+    position: relative;
+}
+.pricing .body .card i{
+    font-size: 70px;
+    color:var(--main-color);
+    width:100%;
+    margin:30px auto;
+    position: relative;
+    z-index: 1;
+}
+.pricing .body .card .price{
+    display: block;
+    width:100%;
+    text-align: center;
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    
+}
+.pricing .body .card p{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color:var(--font-color);
+    position: relative;
+    z-index: 1;
+}
+.pricing .body .card ul{
+    position: relative;
+    z-index: 1;
+}
+.pricing .body .card li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:var(--main-color);
+    padding: 20px;
+}
+.pricing .body .card ul li{
+    border-top: 1px solid var(--s-color);
+    padding: 20px 0;
+}
+.pricing .body .card button{
+    position: relative;
+    border:2px solid var(--main-color);
+    color:var(--main-color);
+    background-color: transparent;
+    padding:15px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin:40px auto;
+    left:50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+    z-index: 1;
+}
+.pricing .body .card button:hover{
+    color:white;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .pricing .body{
+        flex-direction: column;
+    }
+}
+/*End of pricing*/
+/*Start of videos*/
+.videos{
+    padding: var(--main-padding) 0;
+}
+.videos .body{
+    display: flex;
+}
+.videos .left{
+    padding-left: 1px;
+    background-color: var(--s-color);
+    flex-basis: 25%;
+}
+.videos .left .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--s-color);
+}
+.videos .left .top p{
+    font-weight: bold;
+}
+.videos .left ul li{
+    padding: 5px 20px;
+    border-bottom: 1px solid var(--s-color);
+    background-color: white;
+    transition: var(--main-transition);
+}
+.videos .left ul li:hover{
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+.videos .left ul li p{
+    transition: var(--main-transition);
+}
+.videos .left ul li:hover p{
+    color:var(--main-color);
+}
+.videos .left ul li span{
+    padding-left: 5px;
+    margin-top: -10px;
+    display: block;
+    padding-bottom: 15px;
+    color:var(--font-color);
+}
+.videos .right{
+    flex-basis: 75%;
+    padding: 10px 10px 0;
+    background-color: #D7D7D7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.videos .right img{
+    width: 100%;
+    display: block;
+}
+.videos .right p{
+    padding: 20px;
+    background-color: white;
+}
+/*End of videos*/
 /*Start of stats*/
 .stats::before{
     content: "";
@@ -1428,6 +1640,7 @@ a{
     background-color: var(--main-color);
     font-size: 20px;
     font-weight: 800;
+    cursor: pointer;
 }
 .discount .right input:focus,
 .discount .right textarea:focus{
